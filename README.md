@@ -1,6 +1,22 @@
-# Arachne
+<p align="center">
+  <img src="LOGO.jpeg" alt="Arachne" width="700">
+</p>
 
-**Undetectable, tracking web scraping for Node.js and TypeScript.**
+<h3 align="center">Undetectable, tracking web scraping for Node.js and TypeScript</h3>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-BSD--3--Clause-blue" alt="License: BSD-3-Clause"></a>
+  <img src="https://img.shields.io/badge/TypeScript-ready-3178c6" alt="TypeScript ready">
+</p>
+
+<p align="center">
+  <a href="#parsing">Parsing</a> ·
+  <a href="#fetching">Fetching</a> ·
+  <a href="#browsers">Browsers</a> ·
+  <a href="#crawlers">Crawlers</a> ·
+  <a href="#cli">CLI</a> ·
+  <a href="#mcp-server-for-ai-agents">MCP</a>
+</p>
 
 Arachne handles the whole scraping stack: it fetches pages like a real browser, parses them with CSS/XPath, survives website redesigns, and crawls whole sites with a production-ready crawler framework. It also ships with a CLI, an interactive shell, and an MCP server for AI agents.
 
