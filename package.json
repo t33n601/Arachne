@@ -1,0 +1,96 @@
+{
+  "name": "arachne-scraper",
+  "version": "0.1.0",
+  "description": "Undetectable web scraping with element tracking for Node.js: CSS/XPath parsing, browser-impersonating HTTP, stealth browsers, a crawling framework, and an MCP server.",
+  "keywords": [
+    "web-scraping",
+    "scraping",
+    "scraper",
+    "crawler",
+    "web-crawler",
+    "html-parser",
+    "css-selectors",
+    "xpath",
+    "playwright",
+    "headless",
+    "stealth",
+    "cloudflare",
+    "impersonation",
+    "tls-fingerprint",
+    "element-tracking",
+    "mcp",
+    "ai",
+    "typescript",
+    "arachne"
+  ],
+  "author": "t33n601",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./crawl": {
+      "types": "./dist/crawl/index.d.ts",
+      "import": "./dist/crawl/index.js"
+    },
+    "./mcp": {
+      "types": "./dist/ai/mcp.d.ts",
+      "import": "./dist/ai/mcp.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "arachne": "dist/cli.js"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "commander": "^15.0.0",
+    "css-select": "^7.0.0",
+    "css-what": "^8.0.0",
+    "csv-parse": "^7.0.3",
+    "entities": "^8.1.0",
+    "header-generator": "^2.1.88",
+    "impit": "^0.14.5",
+    "parse5": "^8.0.1",
+    "patchright": "^1.63.0",
+    "playwright": "^1.63.0",
+    "robots-parser": "^3.0.1",
+    "saxes": "^6.0.0",
+    "tldts": "^7.4.16",
+    "tough-cookie": "^6.0.2",
+    "turndown": "^7.2.4",
+    "xpath": "^0.0.34",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/turndown": "^5.0.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
